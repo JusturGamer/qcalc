@@ -1,0 +1,114 @@
+QMainWindow {
+	background-color: white;
+	border: 1px solid #a4a4a4;
+}
+
+QLineEdit {
+	font-size: 30px;
+	font-family: Arial;
+	background-color: white;
+	padding: 5px 10px 5px 10px;
+	border: none;
+}
+
+QLineEdit:read-only {
+	color: black;
+}
+
+QScrollArea {
+	background-color: white;
+	border: 1px solid #a4a4a4;
+}
+
+QScrollBar:horizontal {
+	height: 10px;
+	background-color: white;
+}
+
+QScrollBar::handle:horizontal {
+	background: #d3d3d3;
+	min-height: 0px;
+}
+
+QScrollBar::handle:horizontal:hover {
+	background: #bfbfbf;
+	min-height: 0px;
+}
+
+QScrollBar::add-line:horizontal {
+	background: #d3d3d3;
+	height: 0px;
+	subcontrol-position: left;
+	subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal {
+	background: #d3d3d3;
+	height: 0 px;
+	subcontrol-position: right;
+	subcontrol-origin: margin;
+}
+
+QPushButton {
+	color: #4d4d4d;
+	font-size: 24px;
+	font-weight: bold;
+	font-family: Arial;
+	border: 1px solid #c0c0c0;
+	background-color: #d3d3d3;
+}
+
+QPushButton:hover {
+	color: black;
+	background-color: #bfbfbf;
+	border: 1px solid #a4a4a4;
+}
+
+#message {
+	padding: 0px 10px 0px 10px;
+	margin: 15px 1px 0px 1px;
+	min-height: 18px;
+}
+
+#buttonNUM {
+	background-color: #f4f4f4;
+}
+
+#buttonNUM:hover {
+	background-color: #efefef;
+}
+
+#close,
+#minimize {
+	background-color: white;
+	border: none;
+}
+
+#close:hover,
+#minimize:hover {
+	background-color: #efefef;
+}
+
+#close:pressed,
+#minimize:pressed {
+	background-color: #4d90fe;
+}
+
+#minimize {
+	padding-top: 10px;
+}
+
+#equal {
+	background-color: #4d90fe;
+	border: 1px solid #2f5bb7;
+	color: white;
+}
+
+#equal:hover {
+	background-color: #3373dd;
+	border: 1px solid #1f489e;
+}
+
+#bracket {
+	font-size: 22px;
+}

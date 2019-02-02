@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>style.qss</file>
+        <file>icons/icon.ico</file>
+        <file>icons/back.png</file>
+        <file>icons/close.png</file>
+        <file>icons/minimize.png</file>
+        <file>icons/back_hover.png</file>
+        <file>icons/close_hover.png</file>
+        <file>icons/close_pressed.png</file>
+        <file>icons/minimize_hover.png</file>
+        <file>icons/minimize_pressed.png</file>
+    </qresource>
+</RCC>
