@@ -8,8 +8,6 @@ foreach(p CMP0071)
   endif()
 endforeach()
 
-enable_testing()
-
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
@@ -38,11 +36,14 @@ add_library(mainwindow ${CMAKE_SOURCE_DIR}/src/mainwindow.cpp
 
 qt5_use_modules(mainwindow Widgets)
 
-include(${CMAKE_SOURCE_DIR}/cmake/Externals/googletest.cmake)
-
 include_directories(${CMAKE_BINARY_DIR})
 include_directories(${CMAKE_SOURCE_DIR}/include)
 include_directories(${MPFR_INCLUDE_DIRS} ${MPIR_INCLUDE_DIRS})
 
 add_subdirectory(src)
-add_subdirectory(test)
+
+if(BUILD_TESTING)
+  enable_testing()
+  include(${CMAKE_SOURCE_DIR}/cmake/Externals/googletest.cmake)
+  add_subdirectory(test)
+endif()
