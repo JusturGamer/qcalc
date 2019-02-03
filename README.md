@@ -40,3 +40,14 @@ For example, to create solution for Visual Studio 2017 on 64-bit Windows, enter 
 ``` shell
 cmake -G"Visual Studio 15 Win64" . -Bbuild
 ```
+### Tests
+
+To build tests, turn on the `BUILD_TESTING` variable:
+
+``` shell
+cmake -DBUILD_TESTING=ON . -Bbuild
+```
+
+## License
+
+[MIT](https://github.com/wadiim/qcalc/blob/master/LICENSE)
