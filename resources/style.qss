@@ -95,7 +95,7 @@ QPushButton:hover {
 }
 
 #minimize {
-	padding-top: 10px;
+	padding-top: 14px;
 }
 
 #equal {
