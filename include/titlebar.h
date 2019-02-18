@@ -4,6 +4,7 @@
 #include <QWidget>
 
 class QHBoxLayout;
+class ModeButton;
 class CloseButton;
 class MinimizeButton;
 
@@ -18,6 +19,7 @@ private:
 	QPoint cursor;
 	QWidget* parent;
 	QHBoxLayout* layout;
+	ModeButton* mode;
 	CloseButton* close;
 	MinimizeButton* minimize;
 
@@ -26,6 +28,8 @@ protected:
 	void mouseMoveEvent(QMouseEvent* event);
 
 private slots:
+	void modePressed();
+	void modeReleased();
 	void closePressed();
 	void closeReleased();
 	void minimizePressed();

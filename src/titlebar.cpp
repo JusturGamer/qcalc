@@ -6,9 +6,11 @@
 TitleBar::TitleBar(QWidget* parent) : QWidget(parent), parent(parent)
 {
 	layout = new QHBoxLayout();
+	mode = new ModeButton();
 	close = new CloseButton();
 	minimize = new MinimizeButton();
 
+	layout->addWidget(mode);
 	layout->addWidget(minimize);
 	layout->addWidget(close);
 	layout->setAlignment(Qt::AlignRight | Qt::AlignTop);
@@ -19,6 +21,8 @@ TitleBar::TitleBar(QWidget* parent) : QWidget(parent), parent(parent)
 	setLayout(layout);
 
 	connect(close, SIGNAL(clicked()), parent, SLOT(close()));
+	connect(mode, SIGNAL(pressed()), this, SLOT(modePressed()));
+	connect(mode, SIGNAL(released()), this, SLOT(modeReleased()));
 	connect(close, SIGNAL(pressed()), this, SLOT(closePressed()));
 	connect(close, SIGNAL(released()), this, SLOT(closeReleased()));
 	connect(minimize, SIGNAL(clicked()), parent, SLOT(showMinimized()));
@@ -42,6 +46,16 @@ void TitleBar::mouseMoveEvent(QMouseEvent* event)
 		parent->move(event->globalPos() - cursor);
 		event->accept();
 	}
+}
+
+void TitleBar::modePressed()
+{
+	mode->setIcon(QIcon(":/icons/mode_pressed.png"));
+}
+
+void TitleBar::modeReleased()
+{
+	mode->setIcon(QIcon(":/icons/mode_hover.png"));
 }
 
 void TitleBar::closePressed()

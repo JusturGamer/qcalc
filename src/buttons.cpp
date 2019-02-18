@@ -32,6 +32,15 @@ BackButton::BackButton(QWidget* parent) : Button(parent)
 	installEventFilter(backFilter);
 }
 
+ModeButton::ModeButton(QWidget* parent) : QPushButton(parent)
+{
+	initTitleBarButton(this, ":/icons/mode.png");
+	setObjectName("mode");
+
+	ButtonModeFilter* modeFilter = new ButtonModeFilter(this);
+	installEventFilter(modeFilter);
+}
+
 CloseButton::CloseButton(QWidget* parent) : QPushButton(parent)
 {
 	initTitleBarButton(this, ":/icons/close.png");

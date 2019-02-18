@@ -78,17 +78,20 @@ QPushButton:hover {
 	background-color: #efefef;
 }
 
+#mode,
 #close,
 #minimize {
 	background-color: white;
 	border: none;
 }
 
+#mode:hover,
 #close:hover,
 #minimize:hover {
 	background-color: #efefef;
 }
 
+#mode:pressed,
 #close:pressed,
 #minimize:pressed {
 	background-color: #4d90fe;

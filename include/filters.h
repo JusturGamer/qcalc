@@ -5,6 +5,14 @@
 
 class QEvent;
 
+class ButtonModeFilter : public QObject
+{
+	Q_OBJECT
+public:
+	explicit ButtonModeFilter(QObject* parent = Q_NULLPTR);
+	virtual bool eventFilter(QObject* watched, QEvent* event);
+};
+
 class ButtonCloseFilter : public QObject
 {
 	Q_OBJECT

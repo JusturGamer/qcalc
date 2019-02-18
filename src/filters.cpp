@@ -8,6 +8,14 @@ namespace
 		const char* unhover, const char* hover);
 }
 
+ButtonModeFilter::ButtonModeFilter(QObject* parent) : QObject(parent) {}
+
+bool ButtonModeFilter::eventFilter(QObject* watched, QEvent* event)
+{
+	return doEvent(watched, event, ":/icons/mode.png",
+		":/icons/mode_hover.png");
+}
+
 ButtonCloseFilter::ButtonCloseFilter(QObject* parent) : QObject(parent) {}
 
 bool ButtonCloseFilter::eventFilter(QObject* watched, QEvent* event)

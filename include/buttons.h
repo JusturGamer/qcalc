@@ -25,6 +25,13 @@ public:
 	BackButton(QWidget* parent = Q_NULLPTR);
 };
 
+class ModeButton : public QPushButton
+{
+	Q_OBJECT
+public:
+	ModeButton(QWidget* parent = Q_NULLPTR);
+};
+
 class CloseButton : public QPushButton
 {
 	Q_OBJECT
