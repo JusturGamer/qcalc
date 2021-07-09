@@ -1,8 +1,10 @@
 # QCalc
 
-QCalc is a multiple-precision GUI calculator.
+A cross-platform, multiple-precision GUI calculator.
 
-![qcalc](https://user-images.githubusercontent.com/33803413/52157862-d3ae3180-2692-11e9-849f-04f46c99adaf.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/33803413/52157862-d3ae3180-2692-11e9-849f-04f46c99adaf.png" />
+</p>
 
 ## Prerequisites
 
